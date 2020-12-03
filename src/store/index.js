@@ -286,13 +286,13 @@ export default new Vuex.Store({
         getUserId({ state, commit }) {
             if (state.userId == 0)
                 Axios
-                .post("https://rza.kirov.ru/api/index.php", { getid: '' })
+                .post("api/index.php", { getid: '' })
                 .then(r => commit('setUserId', r.data.userId));
         },
         recAns({ state }) {
             if (state.userId > 0)
                 Axios
-                .post("https://rza.kirov.ru/api/index.php", {
+                .post("api/index.php", {
                     rec: state.userId,
                     q: state.activePage,
                     a: state.pages.content[state.activePage - 1].selected
