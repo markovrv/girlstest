@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+/public/api/bd_conf.php
 
 # local env files
 .env.local

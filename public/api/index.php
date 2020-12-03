@@ -1,7 +1,8 @@
 <?php
+require 'bd_conf.php';
 
 $post = json_decode(file_get_contents('php://input'), true);
-$bd = new mysqli("localhost", "markovrv_girlstest", "9091433506", "markovrv_girlstest");
+$bd = new mysqli($serverName, $userName, $userPass, $bdName);
 $bd->query("SET NAMES 'utf8' ");
 $ip = $_SERVER['REMOTE_ADDR'];
 $d = date("yy-m-d H:i:s");
